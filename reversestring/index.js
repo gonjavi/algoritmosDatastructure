@@ -30,7 +30,25 @@ function reverse(str) {
 
   for (const character of str) {
     reversed = character + reversed;
+    debugger;
   }
   return reversed;
 } 
+
+
+/* // solution 3
+function reverse(str) {
+  return str.split('').reduce((reversed, character) => {
+    return character + reversed;
+  }, '');
+}  */
+
+// solution 3
+/* function reverse(str) {
+ 
+  return str.split('').reduce((reversed, character) => character + reversed,'');
+}  */
+
+reverse('asdf');
+
 module.exports = reverse;
