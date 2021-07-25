@@ -25,16 +25,15 @@
     
     retornar el valor reversado
   */
-function reverse(str) {
+/* function reverse(str) {
   let reversed = '';
 
   for (const character of str) {
     reversed = character + reversed;
-    debugger;
   }
   return reversed;
 } 
-
+ */
 
 /* // solution 3
 function reverse(str) {
@@ -44,11 +43,8 @@ function reverse(str) {
 }  */
 
 // solution 3
-/* function reverse(str) {
- 
+function reverse(str) {
   return str.split('').reduce((reversed, character) => character + reversed,'');
-}  */
-
-reverse('asdf');
+} 
 
 module.exports = reverse;
