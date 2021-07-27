@@ -19,13 +19,7 @@
 } */
 
 // solution 2
-/* Crear un string vacio llamado reversed
-    crear un foreach caracter en el string
-        tome el caracter y añadalo al comienzo de reversed
-    
-    retornar el valor reversado
-  */
-/* function reverse(str) {
+function reverse(str) {
   let reversed = '';
 
   for (const character of str) {
@@ -33,7 +27,7 @@
   }
   return reversed;
 } 
- */
+
 
 /* // solution 3
 function reverse(str) {
@@ -43,8 +37,8 @@ function reverse(str) {
 }  */
 
 // solution 3
-function reverse(str) {
+/* function reverse(str) {
   return str.split('').reduce((reversed, character) => character + reversed,'');
-} 
+}  */
 
 module.exports = reverse;
