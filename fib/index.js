@@ -8,6 +8,7 @@
 // Example:
 //   fib(4) === 3
 // test
+
 function fib(n) {
   
 }
