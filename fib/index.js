@@ -7,7 +7,7 @@
 // forms the first ten entries of the fibonacci series.
 // Example:
 //   fib(4) === 3
-// test
+// test ----
 
 function fib(n) {
   
