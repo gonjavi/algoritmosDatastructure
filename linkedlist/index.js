@@ -60,6 +60,53 @@ class LinkedList {
     this.head = this.head.next;
   }
 
+  removeLast() {
+    if (!this.head) {
+      return;
+    }
+
+    if (!this.head.next) {
+      this.head = null;
+      return;
+    }
+
+    let previous = this.head;
+    let node = this.head.next;
+
+    while (node.next) {
+      previous = node;
+      node = node.next;
+    }
+    previous.next = null; // borrar el último
+  }
+
+  insertLast(data) {
+    const last = this.getLast();
+   
+    if (last) {
+      // existen nodes en la cadena
+      last.next = new Node(data)
+    } else {
+      // la cadena esta vacía
+      this.head = new Node(data);
+    }
+  }
+
+  getAt(index) {
+    // retornar el node en determinado index
+    let counter = 0;
+    let node = this.head;
+
+    while (node) {
+      if (counter === index) {
+        return node;
+      }
+
+      counter++;
+      node = node.next;
+    }
+    return null;
+  }
 }
 
 module.exports = { Node, LinkedList };
