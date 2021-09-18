@@ -36,11 +36,32 @@ function selectionSort(arr) {
 }
 
 function mergeSort(arr) {
+  if (arr.length === 1) {
+    return arr;
+  }
 
+  // [ 'a', 'b', 'c', 'd'];
+  const center = Math.floor(arr.length / 2); // would be c
+  const left = arr.slice(0, center);  // a, b
+  const right = arr.slice(center);  // c, d
+
+  return merge(mergeSort(left), mergeSort(right));
 }
 
+// ordena y une dos arreglos
 function merge(left, right) {
+  const results = [];
 
+  while (left.length && right.length) {
+    if (left[0] < right[0]) {
+      results.push(left.shift());
+    } else {
+      results.push(right.shift());
+    }
+  }
+
+  // agregar lo que queda al final del array - concat 
+  return [...results, ...left, ...right];
 }
 
 module.exports = { bubbleSort, selectionSort, mergeSort, merge };
